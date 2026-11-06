@@ -629,7 +629,7 @@ introInit();init();
   const payload = JSON.stringify({ path: location.pathname || "/" });
   try {
     if (navigator.sendBeacon) {
-      const blob = new Blob([payload], { type: "application/json" });
+      const blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
       navigator.sendBeacon(base + "/api/track", blob);
     } else {
       fetch(base + "/api/track", {
