@@ -1,5 +1,6 @@
 name = "cosmology"
 main = "worker.js"
+migrations_dir = "migrations"
 compatibility_date = "2026-11-06"
 
 [[d1_databases]]
