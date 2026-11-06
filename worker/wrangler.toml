@@ -5,4 +5,4 @@ compatibility_date = "2026-11-06"
 [[d1_databases]]
 binding = "DB"
 database_name = "kayhan-analytics"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "e508e105-84e2-4d0e-9ce9-6e0ff06f3b1d"
