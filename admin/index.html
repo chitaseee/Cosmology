@@ -62,7 +62,7 @@ table{width:100%;border-collapse:collapse;font-size:12px}td,th{text-align:right;
  function showDashboard(){ $("loginView").classList.add("hidden");$("dashboard").classList.remove("hidden");loadStats(); }
  function showLogin(){ $("dashboard").classList.add("hidden");$("loginView").classList.remove("hidden"); }
  async function request(path,options={}) {
-   if(!api || api.includes("YOUR-WORKER")) throw new Error("ابتدا آدرس Worker را در فایل kayhan-config.js تنظیم کن.");
+   if(!api || !/^https:\/\//i.test(api)) throw new Error("اتصال پنل هنوز راه‌اندازی نشده است: ابتدا Cloudflare Worker را Deploy کن و آدرس دقیق آن را در kayhan-config.js قرار بده.");
    const headers={...(options.headers||{})}; if(token) headers.Authorization="Bearer "+token;
    const res=await fetch(api+path,{...options,headers});
    const data=await res.json().catch(()=>({error:"پاسخ نامعتبر سرور"}));
