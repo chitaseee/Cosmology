@@ -1,2 +1,4 @@
-/* Set this to the deployed Cloudflare Worker URL to enable analytics. */
-window.KAYHAN_API_BASE = "https://https://chitaseee.github.io/Cosmology/admin/";
+/* Set this to the deployed Cloudflare Worker URL (not the GitHub Pages URL).
+   Example: https://kayhan-analytics.YOUR-SUBDOMAIN.workers.dev
+   Leave empty until the Worker has been deployed and its URL is known. */
+window.KAYHAN_API_BASE = "";
