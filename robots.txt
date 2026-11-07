@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /Cosmology/admin/
 Disallow: /admin/
 
 Sitemap: https://chitaseee.github.io/Cosmology/sitemap.xml
