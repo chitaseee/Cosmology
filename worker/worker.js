@@ -1,6 +1,7 @@
 const enc=new TextEncoder();
 const json=(data,status=200,headers={})=>new Response(JSON.stringify(data),{status,headers:{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store",...headers}});
-function allowed(origin,env){return !!origin&&(origin===env.ALLOWED_ORIGIN||origin==="https://kayhanshenasi.com"||origin==="https://www.kayhanshenasi.com")}\nfunction cors(origin,env){const h={"Access-Control-Allow-Methods":"GET,POST,OPTIONS","Access-Control-Allow-Headers":"Content-Type,Authorization","Access-Control-Max-Age":"86400","Vary":"Origin"};if(allowed(origin,env))h["Access-Control-Allow-Origin"]=origin;return h}
+function allowed(origin,env){return !!origin&&(origin===env.ALLOWED_ORIGIN||origin==="https://kayhanshenasi.com"||origin==="https://www.kayhanshenasi.com")}
+function cors(origin,env){const h={"Access-Control-Allow-Methods":"GET,POST,OPTIONS","Access-Control-Allow-Headers":"Content-Type,Authorization","Access-Control-Max-Age":"86400","Vary":"Origin"};if(allowed(origin,env))h["Access-Control-Allow-Origin"]=origin;return h}
 const b64=b=>btoa(String.fromCharCode(...new Uint8Array(b))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");
 const un64=s=>Uint8Array.from(atob(s.replace(/-/g,"+").replace(/_/g,"/")+"=".repeat((4-s.length%4)%4)),c=>c.charCodeAt(0));
 async function sign(secret,s){const k=await crypto.subtle.importKey("raw",enc.encode(secret),{name:"HMAC",hash:"SHA-256"},false,["sign"]);return new Uint8Array(await crypto.subtle.sign("HMAC",k,enc.encode(s)))}
