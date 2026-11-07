@@ -141,7 +141,13 @@ body.wall .top,body.wall .leftpanel,body.wall .rightpanel,body.wall .bottomnav,b
 @media(max-width:850px){.leftpanel{right:8px!important;left:auto!important;top:76px!important;width:min(270px,calc(44vw - 12px))!important;max-height:calc(100vh - 180px)!important}.rightpanel{left:8px!important;right:auto!important;top:76px!important;bottom:auto!important;width:min(250px,calc(44vw - 12px))!important;max-height:calc(100vh - 180px)!important}}
 @media(max-width:540px){.leftpanel{right:6px!important;left:auto!important;top:72px!important;width:calc(46vw - 10px)!important;max-height:calc(100vh - 165px)!important;padding:10px!important}.rightpanel{left:6px!important;right:auto!important;top:72px!important;bottom:auto!important;width:calc(46vw - 10px)!important;max-height:calc(100vh - 165px)!important;padding:9px!important}.leftpanel .facts{grid-template-columns:1fr!important}.leftpanel .planet-title{font-size:19px}.leftpanel .description{font-size:11px;line-height:1.75}#liveBox{padding:8px}#liveBox .glass{padding:12px;max-height:calc(100vh - 16px)}#liveBox .live-frame{min-height:190px}}
 
-\n.brandmark img{display:block;width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 0 7px #73dcff66);transition:transform .35s,filter .35s}\n.brandmark:hover img{transform:rotate(-8deg) scale(1.08);filter:drop-shadow(0 0 11px #a99affaa)}\n</style>
+\n
+/* Kayhan header galaxy logo: explicit sizing is required for inline SVG */
+.brandmark{display:grid;place-items:center;flex:0 0 42px;overflow:visible}
+.brandmark .kayhan-galaxy-logo{display:block;width:100%;height:100%;max-width:100%;overflow:visible;filter:drop-shadow(0 0 7px #73dcff66);transition:transform .35s,filter .35s}
+.brandmark:hover .kayhan-galaxy-logo{transform:rotate(-8deg) scale(1.08);filter:drop-shadow(0 0 11px #a99affaa)}
+@media(max-width:700px){.brandmark{flex-basis:36px}.brandmark .kayhan-galaxy-logo{width:36px;height:36px}}
+</style>
 
 <style>
 /* Kayhan layout refinements */
@@ -265,7 +271,7 @@ html[dir="ltr"] #scienceHub{left:auto!important;right:22px!important;}
 <body>
 <canvas id="scene" aria-label="3D Solar System view"></canvas>
 <div class="loader" id="loader"><div class="loader-inner"><div class="loader-orb"></div><b>در حال آماده‌سازی کیهان</b><p id="loaderMsg">ساخت بافت‌های سیارات…</p></div></div>
-<header class="top"><div class="brand"><div class="brandmark"><svg class="kayhan-galaxy-logo" aria-label="لوگوی کهکشان کیهان" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+<header class="top"><div class="brand"><div class="brandmark"><svg class="kayhan-galaxy-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="kayhan-logo-title"><title id="kayhan-logo-title">لوگوی کهکشان کیهان</title>
 
 <defs>
  <linearGradient id="arm" x1="18" y1="20" x2="112" y2="108" gradientUnits="userSpaceOnUse"><stop stop-color="#b8f5ff"/><stop offset=".32" stop-color="#55d8ff"/><stop offset=".68" stop-color="#8c78ff"/><stop offset="1" stop-color="#f3a7ff"/></linearGradient>
