@@ -305,28 +305,31 @@ html[dir="ltr"] #scienceHub{left:auto!important;right:22px!important;}
 @media(max-width:850px){html[dir="ltr"] #scienceHub{left:auto!important;right:12px!important;}}
 @media(max-width:540px){html[dir="ltr"] #scienceHub{left:auto!important;right:8px!important;}}
 
-/* Definitive Kayhan header logo image */
+/* Final header logo: use the supplied galaxy artwork at a clearly visible size */
+header.top .brand{align-items:center!important;gap:12px!important}
 header.top .brand .brandmark{
-  width:46px!important;height:46px!important;min-width:46px!important;
-  flex:0 0 46px!important;display:flex!important;align-items:center!important;
-  justify-content:center!important;overflow:visible!important;
+  width:60px!important;height:60px!important;min-width:60px!important;
+  min-height:60px!important;flex:0 0 60px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  overflow:visible!important;border:0!important;background:transparent!important;
+  box-shadow:none!important;border-radius:0!important;
 }
 header.top .brand .brandmark img.kayhan-galaxy-logo{
   display:block!important;visibility:visible!important;opacity:1!important;
-  width:42px!important;height:42px!important;max-width:none!important;
-  object-fit:contain!important;position:relative!important;z-index:2!important;
-  filter:drop-shadow(0 0 8px #73dcff99)!important;
+  width:56px!important;height:56px!important;min-width:56px!important;
+  min-height:56px!important;max-width:none!important;object-fit:contain!important;
+  position:relative!important;z-index:2!important;
+  filter:drop-shadow(0 0 9px #73dcff99)!important;
 }
 @media(max-width:540px){
- header.top .brand .brandmark{width:40px!important;height:40px!important;min-width:40px!important;flex-basis:40px!important}
- header.top .brand .brandmark img.kayhan-galaxy-logo{width:36px!important;height:36px!important}
-}
-</style>
+  header.top .brand .brandmark{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;flex-basis:48px!important}
+  header.top .brand .brandmark img.kayhan-galaxy-logo{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important}
+}</style>
 </head>
 <body>
 <canvas id="scene" aria-label="3D Solar System view"></canvas>
 <div class="loader" id="loader"><div class="loader-inner"><div class="loader-orb"></div><b>در حال آماده‌سازی کیهان</b><p id="loaderMsg">ساخت بافت‌های سیارات…</p></div></div>
-<header class="top"><div class="brand"><div class="brandmark"><img class="kayhan-galaxy-logo" src="https://chitaseee.github.io/Cosmology/assets/kayhan-galaxy.svg?v=4" alt="لوگوی کهکشان کیهان" width="42" height="42" loading="eager" decoding="async"></div><div><h1>کیهان <span style="color:var(--cyan)">/ COSMOS</span></h1><small>کاوشگر تعاملی فضا</small></div></div><div class="top-actions"><button class="iconbtn" id="home" title="نمای کلی" aria-label="نمای کلی">⌂</button><button class="btn return-cosmos" id="returnCosmos" hidden>بازگشت به کیهان</button></div></header>
+<header class="top"><div class="brand"><div class="brandmark"><img class="kayhan-galaxy-logo" src="./assets/kayhan-galaxy.svg?v=5" alt="لوگوی کهکشان کیهان" width="56" height="56" loading="eager" decoding="async"></div><div><h1>کیهان <span style="color:var(--cyan)">/ COSMOS</span></h1><small>کاوشگر تعاملی فضا</small></div></div><div class="top-actions"><button class="iconbtn" id="home" title="نمای کلی" aria-label="نمای کلی">⌂</button><button class="btn return-cosmos" id="returnCosmos" hidden>بازگشت به کیهان</button></div></header>
 <button class="btn" id="scienceHub" type="button">آزمایشگاه کیهان</button>
 <aside class="leftpanel glass hidden" id="info"><div class="phead"><div class="eyebrow">پرونده جرم</div><button class="iconbtn sm" id="infoBack" title="پنهان‌کردن" aria-label="پنهان‌کردن"></button></div><div class="planet-title" id="pname">زمین</div><div class="planet-en" id="pen">EARTH</div><p class="description" id="pdesc">خانه‌ی ما؛ تنها جهان شناخته‌شده‌ای که حیات در آن وجود دارد.</p><div class="facts" id="facts"></div><div class="section-title">اطلاعات مداری</div><div class="facts" id="orbitFacts"></div><div class="actions"><button class="btn" id="overview">نمای کلی</button><button class="btn primary" id="travelNearby" hidden>سفر به قمرهای این سیاره</button></div></aside>
 <aside class="rightpanel glass"><div class="control-head"><span>کنترل تجربه</span><small>تنظیمات صحنه</small></div><div class="toggle"><label for="orbits">نمایش مدارها</label><input id="orbits" type="checkbox" checked></div><div class="toggle"><label for="labels">نام اجرام</label><input id="labels" type="checkbox" checked></div><div class="toggle"><label for="asteroids">کمربند سیارکی</label><input id="asteroids" type="checkbox" checked></div><div class="toggle"><label for="moons">قمرها</label><input id="moons" type="checkbox" checked></div><div class="toggle"><label for="follow">دنبال کردن جرم انتخابی</label><input id="follow" type="checkbox" checked></div><div class="toggle"><label for="earthNight">شب و روز زمین</label><input id="earthNight" type="checkbox" checked></div></aside>
