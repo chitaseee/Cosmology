@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chitaseee.github.io/Cosmology/</loc></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/fa/</loc></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/en/</loc></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/fa/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/en/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/fa/solar-system/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/en/solar-system/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/fa/planets/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/en/planets/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/fa/mars/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/en/mars/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/fa/black-holes/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/en/black-holes/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/fa/milky-way/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://chitaseee.github.io/Cosmology/en/milky-way/</loc><lastmod>2026-11-08</lastmod></url>
 </urlset>
