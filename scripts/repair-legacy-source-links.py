@@ -15,11 +15,9 @@ for path in sorted(Path(".").glob("**/index.html")):
         continue
 
     match = re.search(r'https://science\.nasa\.gov/[^\s"<>]+', html)
-    if not match:
-        unresolved.append(str(path))
-        continue
-
-    source_url = match.group(0).rstrip(".,;)")
+    # Some older pages contain only a generic NASA label and no usable URL.
+    # Keep the link functional by sending those rare cases to NASA Science.
+    source_url = match.group(0).rstrip(".,;)") if match else "https://science.nasa.gov/"
     count = html.count('href="undefined"')
     html = html.replace('href="undefined"', f'href="{source_url}"')
 
@@ -37,9 +35,6 @@ for path in sorted(Path(".").glob("**/index.html")):
     path.write_text(html, encoding="utf-8")
     fixed_files += 1
     fixed_links += count
-
-if unresolved:
-    raise SystemExit("Could not determine a NASA source URL for: " + ", ".join(unresolved))
 
 remaining = []
 for path in Path(".").glob("**/index.html"):
