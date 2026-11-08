@@ -30,6 +30,29 @@ jobs:
           test -f index.html
           test -f admin/index.html
           touch .nojekyll
+      - name: Validate sitemap
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.parse import urlparse
+          from xml.etree import ElementTree as ET
+          import datetime
+
+          sitemap = ET.parse("sitemap.xml").getroot()
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = [node.text for node in sitemap.findall("sm:url/sm:loc", ns)]
+          assert urls, "sitemap.xml contains no URLs"
+          assert len(urls) == len(set(urls)), "sitemap.xml contains duplicate URLs"
+          for url in urls:
+              parsed = urlparse(url)
+              assert parsed.scheme == "https" and parsed.netloc == "chitaseee.github.io", f"Unexpected sitemap host: {url}"
+              assert parsed.path.startswith("/Cosmology/"), f"URL outside project path: {url}"
+              relative = parsed.path.removeprefix("/Cosmology/").strip("/")
+              file_path = Path(relative, "index.html") if relative else Path("index.html")
+              assert file_path.is_file(), f"Sitemap URL has no matching page: {url} -> {file_path}"
+          assert "Sitemap: https://chitaseee.github.io/Cosmology/sitemap.xml" in Path("robots.txt").read_text(), "robots.txt does not reference the XML sitemap"
+          print(f"Validated {len(urls)} unique sitemap URLs.")
+          PY
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
