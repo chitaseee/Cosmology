@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://chitaseee.github.io/Cosmology/sitemap.xml
-Sitemap: https://chitaseee.github.io/Cosmology/sitemap.txt
