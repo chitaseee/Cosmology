@@ -30,6 +30,8 @@ jobs:
           test -f index.html
           test -f admin/index.html
           touch .nojekyll
+      - name: Repair legacy source links
+        run: python scripts/repair-legacy-source-links.py
       - name: Validate sitemap
         run: |
           python - <<'PY'
