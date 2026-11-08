@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kayhanshenasi.com/sitemap.xml
-Sitemap: https://kayhanshenasi.com/sitemap.txt
+Sitemap: https://chitaseee.github.io/Cosmology/sitemap.xml
+Sitemap: https://chitaseee.github.io/Cosmology/sitemap.txt
