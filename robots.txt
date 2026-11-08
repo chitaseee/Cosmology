@@ -4,3 +4,4 @@ Disallow: /Cosmology/admin/
 Disallow: /admin/
 
 Sitemap: https://chitaseee.github.io/Cosmology/sitemap.xml
+Sitemap: https://chitaseee.github.io/Cosmology/sitemap.txt
