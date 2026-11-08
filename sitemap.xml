@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chitaseee.github.io/Cosmology/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/fa/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/en/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/fa/solar-system/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/en/solar-system/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/fa/planets/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/en/planets/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/fa/mars/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/en/mars/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/fa/black-holes/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/en/black-holes/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/fa/milky-way/</loc><lastmod>2026-11-08</lastmod></url>
-  <url><loc>https://chitaseee.github.io/Cosmology/en/milky-way/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/solar-system/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/solar-system/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/planets/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/planets/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/mars/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/mars/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/black-holes/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/black-holes/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/milky-way/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/milky-way/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/earth/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/earth/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/moon/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/moon/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/sun/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/sun/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/mercury/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/mercury/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/venus/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/venus/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/jupiter/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/jupiter/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/saturn/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/saturn/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/uranus/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/uranus/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/neptune/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/neptune/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/exoplanets/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/exoplanets/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/stars/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/stars/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/nebulae/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/nebulae/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/andromeda/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/andromeda/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/big-bang/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/big-bang/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/dark-matter/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/dark-matter/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/dark-energy/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/dark-energy/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/asteroids-comets/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/asteroids-comets/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/eclipses/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/eclipses/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/aurora/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/aurora/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/space-telescopes/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/space-telescopes/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/mars-exploration/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/mars-exploration/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/kuiper-belt/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/kuiper-belt/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/fa/iss/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://chitaseee.github.io/Cosmology/en/iss/</loc><lastmod>2026-11-08</lastmod></url>
 </urlset>
