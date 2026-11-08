@@ -87,5 +87,38 @@
 </div></section>
 </main>
 <footer><div class="wrap">کیهان | محتوای آموزشی نجوم به زبان فارسی و انگلیسی · <a href="../">صفحه اصلی</a> · <a href="../en/">English version</a></div></footer>
+
+<script src="../kayhan-config.js"></script>
+<script>
+/* Kayhan page analytics: counts page loads across the public guide, not unique people. */
+(() => {
+  const base = (window.KAYHAN_API_BASE || "").replace(/\\/+$/, "");
+  if (!base || /(^|\\/)admin(?:\\/|$)/i.test(location.pathname)) return;
+  const payload = JSON.stringify({ path: location.pathname || "/" });
+  try {
+    const blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
+    const queued = typeof navigator.sendBeacon === "function" &&
+      navigator.sendBeacon(base + "/api/track", blob);
+    if (!queued) {
+      fetch(base + "/api/track", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body: payload,
+        mode: "cors",
+        keepalive: true
+      }).catch(() => {});
+    }
+  } catch (_) {
+    fetch(base + "/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=UTF-8" },
+      body: payload,
+      mode: "cors",
+      keepalive: true
+    }).catch(() => {});
+  }
+})();
+</script>
+
 </body>
 </html>
