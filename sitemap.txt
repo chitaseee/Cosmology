@@ -1,3 +1,13 @@
 https://chitaseee.github.io/Cosmology/
 https://chitaseee.github.io/Cosmology/fa/
 https://chitaseee.github.io/Cosmology/en/
+https://chitaseee.github.io/Cosmology/fa/solar-system/
+https://chitaseee.github.io/Cosmology/en/solar-system/
+https://chitaseee.github.io/Cosmology/fa/planets/
+https://chitaseee.github.io/Cosmology/en/planets/
+https://chitaseee.github.io/Cosmology/fa/mars/
+https://chitaseee.github.io/Cosmology/en/mars/
+https://chitaseee.github.io/Cosmology/fa/black-holes/
+https://chitaseee.github.io/Cosmology/en/black-holes/
+https://chitaseee.github.io/Cosmology/fa/milky-way/
+https://chitaseee.github.io/Cosmology/en/milky-way/
