@@ -7,4 +7,37 @@
 <h2>Mars's moons: Phobos and Deimos</h2><p>Mars has two small, irregular moons: Phobos and Deimos. Phobos is larger and closer to Mars, and its orbit is slowly decaying. Deimos is smaller and farther away. Their shapes differ strongly from Earth's nearly spherical Moon.</p>
 <h2>Olympus Mons and Valles Marineris</h2><p>Olympus Mons is the largest known volcano in the Solar System, rising roughly 22 to 25 kilometres from its base to summit. Valles Marineris is a vast canyon system extending about 4,000 kilometres. These features show that Mars is geologically diverse, not simply a featureless desert.</p>
 <h2>How do spacecraft explore Mars?</h2><p>Scientists use telescopes, orbiters, landers and rovers. Orbiters map the surface and atmosphere from above; rovers examine rocks and soil at close range. Missions such as Curiosity and Perseverance investigate the planet's environmental history and past habitability. Carefully selected rock samples may help answer questions that instruments on Mars cannot resolve alone.</p>
-<h2>Frequently asked questions</h2><div class="faq"><details><summary>Can a human stand on Mars without a spacesuit?</summary><p>No. The thin atmosphere, lack of breathable oxygen, low pressure, cold and radiation make an unprotected visit impossible.</p></details><details><summary>Is there water on Mars today?</summary><p>Yes, mainly as water ice. Geological evidence also shows that liquid water existed on the surface in the distant past.</p></details><details><summary>Has life been found on Mars?</summary><p>No confirmed discovery of Martian life has been made.</p></details></div><h2>Related guides</h2><div class="related"><a href="https://chitaseee.github.io/Cosmology/en/solar-system/">Solar System guide →</a><a href="https://chitaseee.github.io/Cosmology/en/planets/">The eight planets →</a><a href="https://chitaseee.github.io/Cosmology/en/black-holes/">Black holes →</a><a href="https://chitaseee.github.io/Cosmology/en/milky-way/">Milky Way →</a><a href="https://chitaseee.github.io/Cosmology/">Open the interactive Kayhan explorer →</a></div><h2>Scientific references</h2><ul class="sources"><li><a href="https://science.nasa.gov/mars/facts/" target="_blank" rel="noopener noreferrer">NASA — Mars Facts</a></li><li><a href="https://science.nasa.gov/mars/" target="_blank" rel="noopener noreferrer">NASA — Mars Exploration</a></li></ul></article></main><footer><div class="wrap">Kayhan · An educational astronomy guide. Approximate measurements are identified and linked to sources. · <a href="https://chitaseee.github.io/Cosmology/fa/">نسخه فارسی</a></div></footer></body></html>
+<h2>Frequently asked questions</h2><div class="faq"><details><summary>Can a human stand on Mars without a spacesuit?</summary><p>No. The thin atmosphere, lack of breathable oxygen, low pressure, cold and radiation make an unprotected visit impossible.</p></details><details><summary>Is there water on Mars today?</summary><p>Yes, mainly as water ice. Geological evidence also shows that liquid water existed on the surface in the distant past.</p></details><details><summary>Has life been found on Mars?</summary><p>No confirmed discovery of Martian life has been made.</p></details></div><h2>Related guides</h2><div class="related"><a href="https://chitaseee.github.io/Cosmology/en/solar-system/">Solar System guide →</a><a href="https://chitaseee.github.io/Cosmology/en/planets/">The eight planets →</a><a href="https://chitaseee.github.io/Cosmology/en/black-holes/">Black holes →</a><a href="https://chitaseee.github.io/Cosmology/en/milky-way/">Milky Way →</a><a href="https://chitaseee.github.io/Cosmology/">Open the interactive Kayhan explorer →</a></div><h2>Scientific references</h2><ul class="sources"><li><a href="https://science.nasa.gov/mars/facts/" target="_blank" rel="noopener noreferrer">NASA — Mars Facts</a></li><li><a href="https://science.nasa.gov/mars/" target="_blank" rel="noopener noreferrer">NASA — Mars Exploration</a></li></ul></article></main><footer><div class="wrap">Kayhan · An educational astronomy guide. Approximate measurements are identified and linked to sources. · <a href="https://chitaseee.github.io/Cosmology/fa/">نسخه فارسی</a></div></footer>
+<script src="../../kayhan-config.js"></script>
+<script>
+/* Kayhan page analytics: counts page loads across the public guide, not unique people. */
+(() => {
+  const base = (window.KAYHAN_API_BASE || "").replace(/\\/+$/, "");
+  if (!base || /(^|\\/)admin(?:\\/|$)/i.test(location.pathname)) return;
+  const payload = JSON.stringify({ path: location.pathname || "/" });
+  try {
+    const blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
+    const queued = typeof navigator.sendBeacon === "function" &&
+      navigator.sendBeacon(base + "/api/track", blob);
+    if (!queued) {
+      fetch(base + "/api/track", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body: payload,
+        mode: "cors",
+        keepalive: true
+      }).catch(() => {});
+    }
+  } catch (_) {
+    fetch(base + "/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=UTF-8" },
+      body: payload,
+      mode: "cors",
+      keepalive: true
+    }).catch(() => {});
+  }
+})();
+</script>
+
+</body></html>
