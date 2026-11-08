@@ -63,4 +63,23 @@ footer{border-top:1px solid var(--line);padding:22px 0 38px;color:var(--muted);f
 <h2>مطالب مرتبط</h2><div class="related"><a href="https://chitaseee.github.io/Cosmology/fa/milky-way/">سیاه‌چاله مرکز راه شیری و کهکشان ←</a><a href="https://chitaseee.github.io/Cosmology/fa/solar-system/">منظومه شمسی ←</a><a href="https://chitaseee.github.io/Cosmology/fa/planets/">هشت سیاره ←</a><a href="https://chitaseee.github.io/Cosmology/fa/mars/">سیاره مریخ ←</a><a href="https://chitaseee.github.io/Cosmology/">رفتن به کاوشگر تعاملی کیهان ←</a></div>
 <h2>منابع علمی برای مطالعه بیشتر</h2><ul class="sources"><li><a href="https://science.nasa.gov/universe/black-holes/" target="_blank" rel="noopener noreferrer">NASA — Black Holes</a></li><li><a href="https://science.nasa.gov/universe/black-holes/anatomy/" target="_blank" rel="noopener noreferrer">NASA — Anatomy of a Black Hole</a></li><li><a href="https://eventhorizontelescope.org/" target="_blank" rel="noopener noreferrer">Event Horizon Telescope</a></li></ul>
 </article></main><footer><div class="wrap">کیهان · راهنمای آموزشی نجوم؛ اعداد و داده‌های تقریبی با ذکر منبع ارائه شده‌اند. · <a href="https://chitaseee.github.io/Cosmology/en/">English</a></div></footer>
+<script src="../../kayhan-config.js"></script>
+<script>
+/* Kayhan page analytics: counts page loads across the public guide, not unique people. */
+(() => {
+  const base = (window.KAYHAN_API_BASE || "").replace(/\/+$/, "");
+  if (!base || /(^|\/)admin(?:\/|$)/i.test(location.pathname)) return;
+  const payload = JSON.stringify({ path: location.pathname || "/" });
+  try {
+    const blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
+    const queued = typeof navigator.sendBeacon === "function" &&
+      navigator.sendBeacon(base + "/api/track", blob);
+    if (!queued) {
+      fetch(base + "/api/track", {method:"POST",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:payload,mode:"cors",keepalive:true}).catch(() => {});
+    }
+  } catch (_) {
+    fetch(base + "/api/track", {method:"POST",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:payload,mode:"cors",keepalive:true}).catch(() => {});
+  }
+})();
+</script>
 </body></html>
