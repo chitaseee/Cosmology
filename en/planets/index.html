@@ -7,4 +7,37 @@
 <h2>6. Saturn</h2><p>Saturn is famous for its broad rings, made of countless icy and rocky particles. The rings are not a solid sheet; they contain gaps and intricate structures. Titan, Saturn's largest moon, has a thick atmosphere and lakes of liquid hydrocarbons on its frigid surface.</p>
 <h2>7. Uranus</h2><p>Uranus rotates with an unusually large axial tilt, producing extreme seasonal patterns. Methane in its atmosphere contributes to its blue-green appearance. It is an ice giant rather than a gas giant like Jupiter or Saturn.</p>
 <h2>8. Neptune</h2><p>Neptune is the farthest major planet from the Sun. Methane absorbs some red light, contributing to its blue appearance, and its atmosphere has exhibited extremely fast winds and large storms.</p>
-<h2>Why is Pluto a dwarf planet?</h2><p>In 2006, the International Astronomical Union adopted a definition requiring a planet in our Solar System to orbit the Sun, be nearly round under its own gravity and clear its orbital neighbourhood. Pluto meets the first two criteria but not the third, so it is classified as a dwarf planet.</p><h2>Frequently asked questions</h2><div class="faq"><details><summary>What is the largest planet?</summary><p>Jupiter is the largest planet in the Solar System.</p></details><details><summary>What is the hottest planet?</summary><p>Venus has the hottest planetary surface because its dense atmosphere produces an extreme greenhouse effect.</p></details><details><summary>Which planets have rings?</summary><p>All four giant planets—Jupiter, Saturn, Uranus and Neptune—have ring systems, although Saturn's are the most prominent.</p></details></div><h2>Related guides</h2><div class="related"><a href="https://chitaseee.github.io/Cosmology/en/solar-system/">Solar System guide →</a><a href="https://chitaseee.github.io/Cosmology/en/mars/">Mars guide →</a><a href="https://chitaseee.github.io/Cosmology/en/black-holes/">Black holes →</a><a href="https://chitaseee.github.io/Cosmology/en/milky-way/">Milky Way →</a><a href="https://chitaseee.github.io/Cosmology/">Open the interactive Kayhan explorer →</a></div><h2>Scientific references</h2><ul class="sources"><li><a href="https://science.nasa.gov/solar-system/planets/" target="_blank" rel="noopener noreferrer">NASA — About the Planets</a></li><li><a href="https://science.nasa.gov/solar-system/planets/planet-sizes-and-locations-in-our-solar-system/" target="_blank" rel="noopener noreferrer">NASA — Planet Sizes and Locations</a></li></ul></article></main><footer><div class="wrap">Kayhan · An educational astronomy guide. Approximate measurements are identified and linked to sources. · <a href="https://chitaseee.github.io/Cosmology/fa/">نسخه فارسی</a></div></footer></body></html>
+<h2>Why is Pluto a dwarf planet?</h2><p>In 2006, the International Astronomical Union adopted a definition requiring a planet in our Solar System to orbit the Sun, be nearly round under its own gravity and clear its orbital neighbourhood. Pluto meets the first two criteria but not the third, so it is classified as a dwarf planet.</p><h2>Frequently asked questions</h2><div class="faq"><details><summary>What is the largest planet?</summary><p>Jupiter is the largest planet in the Solar System.</p></details><details><summary>What is the hottest planet?</summary><p>Venus has the hottest planetary surface because its dense atmosphere produces an extreme greenhouse effect.</p></details><details><summary>Which planets have rings?</summary><p>All four giant planets—Jupiter, Saturn, Uranus and Neptune—have ring systems, although Saturn's are the most prominent.</p></details></div><h2>Related guides</h2><div class="related"><a href="https://chitaseee.github.io/Cosmology/en/solar-system/">Solar System guide →</a><a href="https://chitaseee.github.io/Cosmology/en/mars/">Mars guide →</a><a href="https://chitaseee.github.io/Cosmology/en/black-holes/">Black holes →</a><a href="https://chitaseee.github.io/Cosmology/en/milky-way/">Milky Way →</a><a href="https://chitaseee.github.io/Cosmology/">Open the interactive Kayhan explorer →</a></div><h2>Scientific references</h2><ul class="sources"><li><a href="https://science.nasa.gov/solar-system/planets/" target="_blank" rel="noopener noreferrer">NASA — About the Planets</a></li><li><a href="https://science.nasa.gov/solar-system/planets/planet-sizes-and-locations-in-our-solar-system/" target="_blank" rel="noopener noreferrer">NASA — Planet Sizes and Locations</a></li></ul></article></main><footer><div class="wrap">Kayhan · An educational astronomy guide. Approximate measurements are identified and linked to sources. · <a href="https://chitaseee.github.io/Cosmology/fa/">نسخه فارسی</a></div></footer>
+<script src="../../kayhan-config.js"></script>
+<script>
+/* Kayhan page analytics: counts page loads across the public guide, not unique people. */
+(() => {
+  const base = (window.KAYHAN_API_BASE || "").replace(/\\/+$/, "");
+  if (!base || /(^|\\/)admin(?:\\/|$)/i.test(location.pathname)) return;
+  const payload = JSON.stringify({ path: location.pathname || "/" });
+  try {
+    const blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
+    const queued = typeof navigator.sendBeacon === "function" &&
+      navigator.sendBeacon(base + "/api/track", blob);
+    if (!queued) {
+      fetch(base + "/api/track", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body: payload,
+        mode: "cors",
+        keepalive: true
+      }).catch(() => {});
+    }
+  } catch (_) {
+    fetch(base + "/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=UTF-8" },
+      body: payload,
+      mode: "cors",
+      keepalive: true
+    }).catch(() => {});
+  }
+})();
+</script>
+
+</body></html>
