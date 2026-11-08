@@ -5,4 +5,37 @@
 <h2>Asteroid belt, Kuiper Belt and Oort Cloud</h2><p>The main asteroid belt lies mostly between Mars and Jupiter and contains rocky and metallic bodies of many sizes. Beyond Neptune is the Kuiper Belt, a broad region of icy objects that includes Pluto. Much farther away, the Oort Cloud is a hypothesized roughly spherical reservoir that may supply many long-period comets. Its structure has not been directly mapped in detail.</p>
 <h2>How did the Solar System form?</h2><p>The leading model says that about 4.6 billion years ago a cloud of gas and dust collapsed under gravity. The central region formed the young Sun, while leftover material settled into a rotating disk. Small particles collided and accumulated into larger bodies, eventually building planetesimals and protoplanets. Temperature differences across the disk helped determine which materials could condense at different distances.</p>
 <h2>Is the Solar System moving?</h2><p>Yes. Earth orbits the Sun, and the Sun with its planets travels around the centre of the Milky Way. The galaxy itself is part of the Local Group and larger cosmic structures. Our motion through space therefore happens on several scales at once.</p>
-<h2>Frequently asked questions</h2><div class="faq"><details><summary>How many planets are in the Solar System?</summary><p>There are eight recognized planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.</p></details><details><summary>Why is Pluto not a major planet?</summary><p>Pluto is round and orbits the Sun, but it has not cleared its orbital neighbourhood. The International Astronomical Union classifies it as a dwarf planet.</p></details><details><summary>Which planet is farthest from the Sun?</summary><p>Neptune is the most distant of the eight planets.</p></details><details><summary>Does Earth's distance from the Sun stay constant?</summary><p>No. Earth's orbit is slightly elliptical, so its distance changes during the year. One AU is a reference average.</p></details></div><h2>Related guides</h2><div class="related"><a href="https://chitaseee.github.io/Cosmology/en/planets/">The eight planets →</a><a href="https://chitaseee.github.io/Cosmology/en/mars/">Mars guide →</a><a href="https://chitaseee.github.io/Cosmology/en/black-holes/">Black holes →</a><a href="https://chitaseee.github.io/Cosmology/en/milky-way/">Milky Way →</a><a href="https://chitaseee.github.io/Cosmology/">Open the interactive Kayhan explorer →</a></div><h2>Scientific references</h2><ul class="sources"><li><a href="https://science.nasa.gov/solar-system/solar-system-facts/" target="_blank" rel="noopener noreferrer">NASA — Solar System Facts</a></li><li><a href="https://science.nasa.gov/solar-system/planets/" target="_blank" rel="noopener noreferrer">NASA — About the Planets</a></li><li><a href="https://science.nasa.gov/solar-system/" target="_blank" rel="noopener noreferrer">NASA — Solar System Exploration</a></li></ul></article></main><footer><div class="wrap">Kayhan · An educational astronomy guide. Approximate measurements are identified and linked to sources. · <a href="https://chitaseee.github.io/Cosmology/fa/">نسخه فارسی</a></div></footer></body></html>
+<h2>Frequently asked questions</h2><div class="faq"><details><summary>How many planets are in the Solar System?</summary><p>There are eight recognized planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.</p></details><details><summary>Why is Pluto not a major planet?</summary><p>Pluto is round and orbits the Sun, but it has not cleared its orbital neighbourhood. The International Astronomical Union classifies it as a dwarf planet.</p></details><details><summary>Which planet is farthest from the Sun?</summary><p>Neptune is the most distant of the eight planets.</p></details><details><summary>Does Earth's distance from the Sun stay constant?</summary><p>No. Earth's orbit is slightly elliptical, so its distance changes during the year. One AU is a reference average.</p></details></div><h2>Related guides</h2><div class="related"><a href="https://chitaseee.github.io/Cosmology/en/planets/">The eight planets →</a><a href="https://chitaseee.github.io/Cosmology/en/mars/">Mars guide →</a><a href="https://chitaseee.github.io/Cosmology/en/black-holes/">Black holes →</a><a href="https://chitaseee.github.io/Cosmology/en/milky-way/">Milky Way →</a><a href="https://chitaseee.github.io/Cosmology/">Open the interactive Kayhan explorer →</a></div><h2>Scientific references</h2><ul class="sources"><li><a href="https://science.nasa.gov/solar-system/solar-system-facts/" target="_blank" rel="noopener noreferrer">NASA — Solar System Facts</a></li><li><a href="https://science.nasa.gov/solar-system/planets/" target="_blank" rel="noopener noreferrer">NASA — About the Planets</a></li><li><a href="https://science.nasa.gov/solar-system/" target="_blank" rel="noopener noreferrer">NASA — Solar System Exploration</a></li></ul></article></main><footer><div class="wrap">Kayhan · An educational astronomy guide. Approximate measurements are identified and linked to sources. · <a href="https://chitaseee.github.io/Cosmology/fa/">نسخه فارسی</a></div></footer>
+<script src="../../kayhan-config.js"></script>
+<script>
+/* Kayhan page analytics: counts page loads across the public guide, not unique people. */
+(() => {
+  const base = (window.KAYHAN_API_BASE || "").replace(/\\/+$/, "");
+  if (!base || /(^|\\/)admin(?:\\/|$)/i.test(location.pathname)) return;
+  const payload = JSON.stringify({ path: location.pathname || "/" });
+  try {
+    const blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
+    const queued = typeof navigator.sendBeacon === "function" &&
+      navigator.sendBeacon(base + "/api/track", blob);
+    if (!queued) {
+      fetch(base + "/api/track", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body: payload,
+        mode: "cors",
+        keepalive: true
+      }).catch(() => {});
+    }
+  } catch (_) {
+    fetch(base + "/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=UTF-8" },
+      body: payload,
+      mode: "cors",
+      keepalive: true
+    }).catch(() => {});
+  }
+})();
+</script>
+
+</body></html>
