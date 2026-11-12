@@ -32,6 +32,8 @@ jobs:
           touch .nojekyll
       - name: Repair legacy source links
         run: python scripts/repair-legacy-source-links.py
+      - name: Run SEO quality audit
+        run: python scripts/seo-audit.py
       - name: Validate sitemap
         run: |
           python - <<'PY'
