@@ -165,7 +165,7 @@ else:
 print("\\nKayhan SEO audit summary")
 print(f"HTML pages checked: {len(pages)}")
 print(f"URLs in sitemap: {len(sitemap_urls)}")
-print(f"Structured data blocks parsed: {sum(1 for p in pages if p.is_file())}")
+print(f"Structured data blocks parsed: {structured_data_blocks}")
 if issues:
     print("Findings (warnings; deployment is not blocked):")
     for name, count in sorted(issues.items()):
