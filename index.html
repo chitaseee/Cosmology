@@ -443,23 +443,17 @@ const SK='script,style,#intro,#facts,#orbitFacts,#pname,#pen,#pdesc,#speedOut,#d
 function trAll(){const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const p=n.parentElement;if(!p||p.closest(SK))continue;let o=orig.get(n);if(o===undefined){o=n.nodeValue;orig.set(n,o)}const v=lang==='en'?DN[K(o)]:null;n.nodeValue=v?o.replace(o.trim(),v):o}
 document.querySelectorAll('[title],[placeholder],[aria-label]').forEach(e=>['title','placeholder','aria-label'].forEach(a=>{if(!e.hasAttribute(a)||e.closest('#intro'))return;const k='o_'+a.replace('-','');if(e.dataset[k]===undefined)e.dataset[k]=e.getAttribute(a);const o=e.dataset[k],v=lang==='en'?DN[K(o)]:null;e.setAttribute(a,v||o)}))}
 const fillList=()=>{};
-let counterRequestRunning=false;
-async function updateDisplayCounter(){
- if(counterRequestRunning)return;
+function updateDisplayCounter(){
  const out=$('displayCounterValue'),label=$('displayCounterLabel');
- const base=(window.KAYHAN_API_BASE||'').replace(/\\/+$/,'');
- if(!base){if(label)label.textContent=lang==='en'?'Live statistics unavailable':'آمار زنده در دسترس نیست';return}
- counterRequestRunning=true;
- try{
-  const response=await fetch(base+'/api/public-stats',{method:'GET',cache:'no-store',headers:{'Accept':'application/json'}});
-  if(!response.ok)throw new Error('stats unavailable');
-  const data=await response.json();
-  if(!Number.isFinite(Number(data.total)))throw new Error('invalid stats');
-  if(out)out.textContent=new Intl.NumberFormat(lang==='en'?'en-US':'fa-IR').format(Number(data.total));
-  if(label)label.textContent=lang==='en'?'Recorded visits':'بازدیدهای ثبت‌شده';
- }catch(_){
-  if(label)label.textContent=lang==='en'?'Live statistics unavailable':'آمار زنده در دسترس نیست';
- }finally{counterRequestRunning=false}
+ // Presentation-only counter: fixed baseline plus 20 per UTC calendar day.
+ // It is deliberately independent of the real Worker analytics API.
+ const start=Date.UTC(2026,10,13);
+ const today=new Date();
+ const todayUtc=Date.UTC(today.getUTCFullYear(),today.getUTCMonth(),today.getUTCDate());
+ const days=Math.max(0,Math.floor((todayUtc-start)/86400000));
+ const displayTotal=1000+(days*20);
+ if(out)out.textContent=new Intl.NumberFormat(lang==='en'?'en-US':'fa-IR').format(displayTotal);
+ if(label)label.textContent=lang==='en'?'Display counter':'شمارنده نمایشی';
 }
 function setLang(l){lang=l;const counter=$('displayCounter');if(counter)counter.hidden=false;updateDisplayCounter();const h=document.documentElement;h.lang=l;h.dir=l==='en'?'ltr':'rtl';trAll();for(const b of all)if(b.label){b.label.material.map=labelTexture(nm(b));b.label.material.needsUpdate=true}for(const g of glx){g.sp.material.map=labelTexture(tl(g));g.sp.material.needsUpdate=true}if(selected&&selected.pos)fillInfo(selected);speedOut();lastDate='';renderIntro();applyStaticLanguage();document.querySelectorAll('.tab').forEach(t=>{const v=t.dataset.view;t.textContent=lang==='en'?({system:'Solar System',inner:'Rocky Planets',outer:'Gas Giants',dwarf:'Dwarf Planets',galaxy:'Milky Way',sky:'Star Map'}[v]||t.textContent):({system:'منظومه شمسی',inner:'سیارات سنگی',outer:'غول‌های گازی',dwarf:'سیارات کوتوله',galaxy:'کهکشان راه شیری',sky:'نقشهٔ آسمان'}[v]||t.textContent)});const rb=$('returnCosmos');if(rb)rb.textContent=lang==='en'?'Return to the Cosmos':'بازگشت به کیهان';if(selected)fillInfo(selected);if(constellationGroup)constellationGroup.children.forEach(o=>{if(o.isSprite&&o.userData&&(o.userData.fa||o.userData.en)){o.material.map=labelTexture(lang==='en'?o.userData.en:o.userData.fa);o.material.needsUpdate=true}}); }
 const WALL=new URLSearchParams(location.search),IS_WALL=WALL.get('wall')==='1',DL_URL='';
