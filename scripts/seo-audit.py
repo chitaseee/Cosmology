@@ -81,7 +81,8 @@ pages = sorted(p for p in ROOT.rglob("*.html")
 issues = Counter()
 titles = Counter()
 canonicals = Counter()
-sitemap_urls = []\nstructured_data_blocks = 0
+sitemap_urls = []
+structured_data_blocks = 0
 
 for path in pages:
     parser = SEOParser()
@@ -92,7 +93,9 @@ for path in pages:
         print(f"WARN {path}: could not parse HTML ({exc})")
         continue
 
-    structured_data_blocks += parser.jsonld_count\n\n    if not parser.title:
+    structured_data_blocks += parser.jsonld_count
+
+    if not parser.title:
         issues["missing_title"] += 1
         print(f"WARN {path}: missing <title>")
     else:
