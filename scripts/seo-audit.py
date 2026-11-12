@@ -73,7 +73,7 @@ class SEOParser(HTMLParser):
 
     @property
     def title(self):
-        return re.sub(r"\\s+", " ", "".join(self.title_parts)).strip()
+        return re.sub(r"\s+", " ", "".join(self.title_parts)).strip()
 
 
 pages = sorted(p for p in ROOT.rglob("*.html")
@@ -81,7 +81,7 @@ pages = sorted(p for p in ROOT.rglob("*.html")
 issues = Counter()
 titles = Counter()
 canonicals = Counter()
-sitemap_urls = []
+sitemap_urls = []\nstructured_data_blocks = 0
 
 for path in pages:
     parser = SEOParser()
@@ -92,7 +92,7 @@ for path in pages:
         print(f"WARN {path}: could not parse HTML ({exc})")
         continue
 
-    if not parser.title:
+    structured_data_blocks += parser.jsonld_count\n\n    if not parser.title:
         issues["missing_title"] += 1
         print(f"WARN {path}: missing <title>")
     else:
@@ -162,7 +162,7 @@ else:
     issues["missing_sitemap"] += 1
     print("WARN sitemap.xml is missing")
 
-print("\\nKayhan SEO audit summary")
+print("\nKayhan SEO audit summary")
 print(f"HTML pages checked: {len(pages)}")
 print(f"URLs in sitemap: {len(sitemap_urls)}")
 print(f"Structured data blocks parsed: {structured_data_blocks}")
