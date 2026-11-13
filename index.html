@@ -357,7 +357,7 @@ header.top .brand .brandmark svg.kayhan-galaxy-logo{
 <section class="transport glass" aria-live="off"><div class="transport-top"><div class="transport-date" id="dateLabel">—</div></div></section>
 <div class="tip" id="tip"></div><div class="sky-badge" id="skyBadge">صورت‌های فلکی · Star Map</div>
 <div class="help" id="help" role="dialog" aria-label="راهنما"><div class="glass"><h3>راهنمای کلیدها</h3><dl><dt>Space</dt><dd>پخش / توقف زمان</dd><dt>R</dt><dd>حرکت معکوس</dd><dt>0 – 9</dt><dd>خورشید و سیارات به ترتیب</dd><dt>T</dt><dd>تور خودکار</dd><dt>H</dt><dd>نمای کلی</dd><dt>L · O · M · F</dt><dd>نام‌ها · مدارها · قمرها · دنبال کردن</dd><dt>+ / −</dt><dd>سرعت زمان</dd><dt>Esc</dt><dd>بستن پنل‌ها</dd></dl></div></div>
-<div id="displayCounter" hidden aria-live="off"><span id="displayCounterLabel">بازدیدهای ثبت‌شده</span><b id="displayCounterValue">۰</b></div>
+<div id="displayCounter" hidden aria-live="off"><span id="displayCounterLabel">بازدیدکنندگان کیهان</span><b id="displayCounterValue">۰</b></div>
 <div id="intro"><div class="aurora"></div><div class="grain"></div>
 <div class="stage on" id="langStage"><div class="lcard"><div class="lmark"><svg viewBox="0 0 24 24" width="40" height="40"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a5cff"/><stop offset="1" stop-color="#3fa9ff"/></linearGradient></defs><path fill="url(#lg)" d="M12 2c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z"/></svg></div><h2>کیهان <span>Kayhan</span></h2><p>زبان خود را انتخاب کنید · Choose your language</p><div class="langrow"><button class="langbtn" id="pickFa">فارسی</button><button class="langbtn" id="pickEn">English</button></div></div></div>
 <div class="stage" id="homeStage">
@@ -446,7 +446,7 @@ const fillList=()=>{};
 function updateDisplayCounter(value){
  const out=$('displayCounterValue'),label=$('displayCounterLabel');
  if(out&&Number.isFinite(Number(value)))out.textContent=new Intl.NumberFormat(lang==='en'?'en-US':'fa-IR').format(Number(value));
- if(label)label.textContent=lang==='en'?'Total visits':'کل بازدیدها';
+ if(label)label.textContent=lang==='en'?'Kayhan visitors':'بازدیدکنندگان کیهان';
 }
 function setLang(l){lang=l;const h=document.documentElement;h.lang=l;h.dir=l==='en'?'ltr':'rtl';trAll();for(const b of all)if(b.label){b.label.material.map=labelTexture(nm(b));b.label.material.needsUpdate=true}for(const g of glx){g.sp.material.map=labelTexture(tl(g));g.sp.material.needsUpdate=true}if(selected&&selected.pos)fillInfo(selected);speedOut();lastDate='';renderIntro();applyStaticLanguage();document.querySelectorAll('.tab').forEach(t=>{const v=t.dataset.view;t.textContent=lang==='en'?({system:'Solar System',inner:'Rocky Planets',outer:'Gas Giants',dwarf:'Dwarf Planets',galaxy:'Milky Way',sky:'Star Map'}[v]||t.textContent):({system:'منظومه شمسی',inner:'سیارات سنگی',outer:'غول‌های گازی',dwarf:'سیارات کوتوله',galaxy:'کهکشان راه شیری',sky:'نقشهٔ آسمان'}[v]||t.textContent)});const rb=$('returnCosmos');if(rb)rb.textContent=lang==='en'?'Return to the Cosmos':'بازگشت به کیهان';if(selected)fillInfo(selected);if(constellationGroup)constellationGroup.children.forEach(o=>{if(o.isSprite&&o.userData&&(o.userData.fa||o.userData.en)){o.material.map=labelTexture(lang==='en'?o.userData.en:o.userData.fa);o.material.needsUpdate=true}}); }
 const WALL=new URLSearchParams(location.search),IS_WALL=WALL.get('wall')==='1',DL_URL='';
