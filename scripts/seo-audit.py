@@ -103,16 +103,17 @@ for path in pages:
         if len(parser.title) > 70:
             issues["long_title"] += 1
             print(f"WARN {path}: title is {len(parser.title)} characters")
-    if not parser.description:
+    is_noindex = "noindex" in parser.robots
+    if not parser.description and not is_noindex:
         issues["missing_description"] += 1
         print(f"WARN {path}: missing meta description")
-    elif len(parser.description) < 50 or len(parser.description) > 180:
+    elif parser.description and (len(parser.description) < 50 or len(parser.description) > 180):
         issues["description_length"] += 1
         print(f"WARN {path}: description length is {len(parser.description)}")
-    if not parser.canonical:
+    if not parser.canonical and not is_noindex:
         issues["missing_canonical"] += 1
         print(f"WARN {path}: missing canonical URL")
-    else:
+    elif parser.canonical:
         canonicals[parser.canonical] += 1
         if not parser.canonical.startswith(BASE):
             issues["canonical_outside_site"] += 1
@@ -123,7 +124,7 @@ for path in pages:
     if parser.h1_count == 0:
         issues["missing_h1"] += 1
         print(f"WARN {path}: no H1 heading")
-    if "noindex" in parser.robots:
+    if is_noindex:
         issues["noindex_pages"] += 1
         print(f"INFO {path}: robots meta contains noindex")
     if parser.jsonld_errors:

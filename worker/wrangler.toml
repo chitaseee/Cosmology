@@ -1,9 +1,9 @@
 name = "cosmology"
 main = "worker.js"
-migrations_dir = "migrations"
 compatibility_date = "2026-11-06"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "kayhan-analytics"
 database_id = "e508e105-84e2-4d0e-9ce9-6e0ff06f3b1d"
+migrations_dir = "migrations"
