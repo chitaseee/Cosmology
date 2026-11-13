@@ -75,8 +75,8 @@ footer{border-top:1px solid var(--line);padding:22px 0 38px;color:var(--muted);f
 <script>
 /* Kayhan page analytics: counts page loads across the public guide, not unique people. */
 (() => {
-  const base = (window.KAYHAN_API_BASE || "").replace(/\\/+$/, "");
-  if (!base || /(^|\\/)admin(?:\\/|$)/i.test(location.pathname)) return;
+  const base = (window.KAYHAN_API_BASE || "").replace(/\/+$/, "");
+  if (!base || /(^|\/)admin(?:\/|$)/i.test(location.pathname)) return;
   const payload = JSON.stringify({ path: location.pathname || "/" });
   try {
     const blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
