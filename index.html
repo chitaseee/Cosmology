@@ -719,7 +719,7 @@ introInit();init();setInterval(updateDisplayCounter,60000);
   window.KayhanRecordVisit = async () => {
     if (!base || isAdminPath || recorded) return;
     recorded = true;
-    const payload = JSON.stringify({ path: location.pathname || "/" });
+    const payload = JSON.stringify({ path: "/__kayhan_language_selection__" });
     try {
       await fetch(base + "/api/track", {
         method: "POST", headers: { "Content-Type": "application/json" },
