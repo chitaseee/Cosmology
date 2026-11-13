@@ -446,7 +446,7 @@ const fillList=()=>{};
 function updateDisplayCounter(value){
  const out=$('displayCounterValue'),label=$('displayCounterLabel');
  if(out&&Number.isFinite(Number(value)))out.textContent=new Intl.NumberFormat(lang==='en'?'en-US':'fa-IR').format(Number(value));
- if(label)label.textContent=lang==='en'?'Today’s visits':'بازدید امروز';
+ if(label)label.textContent=lang==='en'?'Total visits':'کل بازدیدها';
 }
 function setLang(l){lang=l;const h=document.documentElement;h.lang=l;h.dir=l==='en'?'ltr':'rtl';trAll();for(const b of all)if(b.label){b.label.material.map=labelTexture(nm(b));b.label.material.needsUpdate=true}for(const g of glx){g.sp.material.map=labelTexture(tl(g));g.sp.material.needsUpdate=true}if(selected&&selected.pos)fillInfo(selected);speedOut();lastDate='';renderIntro();applyStaticLanguage();document.querySelectorAll('.tab').forEach(t=>{const v=t.dataset.view;t.textContent=lang==='en'?({system:'Solar System',inner:'Rocky Planets',outer:'Gas Giants',dwarf:'Dwarf Planets',galaxy:'Milky Way',sky:'Star Map'}[v]||t.textContent):({system:'منظومه شمسی',inner:'سیارات سنگی',outer:'غول‌های گازی',dwarf:'سیارات کوتوله',galaxy:'کهکشان راه شیری',sky:'نقشهٔ آسمان'}[v]||t.textContent)});const rb=$('returnCosmos');if(rb)rb.textContent=lang==='en'?'Return to the Cosmos':'بازگشت به کیهان';if(selected)fillInfo(selected);if(constellationGroup)constellationGroup.children.forEach(o=>{if(o.isSprite&&o.userData&&(o.userData.fa||o.userData.en)){o.material.map=labelTexture(lang==='en'?o.userData.en:o.userData.fa);o.material.needsUpdate=true}}); }
 const WALL=new URLSearchParams(location.search),IS_WALL=WALL.get('wall')==='1',DL_URL='';
@@ -711,10 +711,27 @@ introInit();init();setInterval(updateDisplayCounter,60000);
 
 <script src="./kayhan-config.js"></script>
 <script>
-/* Kayhan analytics: count a visit only after language selection, then show today's server total. */
+/* Kayhan analytics: show the same all-time total as the admin dashboard. */
 (() => {
   const base = (window.KAYHAN_API_BASE || "").replace(/\/+$/, "");
   const isAdminPath = /(^|\/)admin(?:\/|$)/i.test(location.pathname);
+
+  async function refreshPublicStats() {
+    if (!base || isAdminPath) return;
+    try {
+      const response = await fetch(base + "/api/public-stats", {
+        method: "GET", mode: "cors", cache: "no-store"
+      });
+      if (!response.ok) throw new Error("Stats unavailable");
+      const stats = await response.json();
+      if (typeof updateDisplayCounter === "function") {
+        updateDisplayCounter(Number(stats.total) || 0);
+      }
+    } catch (_) {
+      // Keep the last server-provided value; never invent a count.
+    }
+  }
+
   let recorded = false;
   window.KayhanRecordVisit = async () => {
     if (!base || isAdminPath || recorded) return;
@@ -725,14 +742,17 @@ introInit();init();setInterval(updateDisplayCounter,60000);
         method: "POST", headers: { "Content-Type": "application/json" },
         body: payload, mode: "cors", keepalive: true
       });
-      const response = await fetch(base + "/api/public-stats", { method: "GET", mode: "cors", cache: "no-store" });
-      if (!response.ok) throw new Error("Stats unavailable");
-      const stats = await response.json();
-      if (typeof updateDisplayCounter === "function") updateDisplayCounter(stats.today || 0);
     } catch (_) {
-      // Keep the counter at zero rather than showing a fabricated number.
+      // The following stats request will still attempt to show the server total.
     }
+    await refreshPublicStats();
   };
+
+  // Keep the visible language-selection counter synchronized with the admin total.
+  setInterval(() => {
+    const counter = document.getElementById("displayCounter");
+    if (counter && !counter.hidden) refreshPublicStats();
+  }, 60000);
 })();
 </script>
 
